@@ -1,0 +1,407 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url('./assets/zeus-small.png'),
+    url('./assets/background-small.png');
+  background-size: center center, 320 503;
+  background-repeat: no-repeat;
+  background-position: center 0, center 0;
+  background-color: #000032;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 135px;
+}
+
+.slots {
+  width: 320px;
+  height: 190px;
+  border: 5px solid #00ffff;
+  border-radius: 35px;
+  margin-top: 176px;
+}
+
+.slots-inner {
+  width: 310px;
+  height: 180px;
+  border: 5px solid #00003e;
+  border-radius: 30px;
+  background: radial-gradient(#0b88a4, #001e44);
+  display: flex;
+  padding: 17px 18px 20px 13px;
+}
+
+.reel1 {
+  min-width: 28px;
+  height: 133px;
+  background-image: url('./assets/Frame 6.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+.reel2 {
+  min-width: 29px;
+  height: 133px;
+  background-image: url('./assets/Frame 7.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.reel3 {
+  min-width: 29px;
+  height: 133px;
+  background-image: url('./assets/Frame 8.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.reel4 {
+  min-width: 29px;
+  height: 133px;
+  background-image: url('./assets/Frame 9.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.reel5 {
+  min-width: 29px;
+  height: 133px;
+  background-image: url('./assets/Frame 10.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.modal {
+  width: 320px;
+  height: 190px;
+  border: 5px solid #00ffff;
+  border-radius: 35px;
+  margin-top: 312px;
+  top: -160px;
+  position: absolute;
+  z-index: 2;
+}
+
+.modal-content {
+  width: 310px;
+  height: 180px;
+  border: 5px solid #00003e;
+  border-radius: 30px;
+  background: radial-gradient(#0b88a4, #001e44);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.modal-title {
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 1;
+  font-family: 'Nerko One', cursive;
+  margin-bottom: 20px;
+}
+
+.modal-text {
+  font-size: 30px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #f8ac38, #e68339);
+  background: -webkit-linear-gradient(#f8ac38, #e68339);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.top-button {
+  width: 142px;
+  height: 50px;
+  background-image: url('./assets/Topbutton.png');
+  position: absolute;
+  top: 147px;
+}
+
+.line {
+  width: 1px;
+  height: 125px;
+  background: radial-gradient(#00ffff, #ffffff00);
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  background: url('./assets/Buttonmodal.png');
+  position: absolute;
+  top: 355px;
+  width: 219px;
+  height: 60px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+.button-modal {
+  background: url('./assets/Closemodal.png');
+  width: 144px;
+  height: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer {
+  width: 320px;
+  height: 293px;
+  background: #181818;
+  padding-top: 20px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-content {
+  width: 320px;
+  text-align: center;
+}
+
+.brline {
+  border-top: 1px solid #636363;
+  margin-bottom: 10px;
+}
+
+.text-links {
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.text-adress {
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    background-image: url('./assets/zeus.png'), url('./assets/background.png');
+    background-size: 852px 680px, cover;
+    background-position: 89% 0, center center;
+  }
+
+  .slots {
+    width: 1198px;
+    height: 724px;
+    border: 23px solid #00ffff;
+    border-radius: 135px;
+    margin-top: 312px;
+  }
+
+  .slots-inner {
+    width: 1156px;
+    height: 682px;
+    border: 23px solid #00003e;
+    border-radius: 110px;
+    padding: 50px 49px 66px 48px;
+  }
+
+  .reel1 {
+    width: 109px;
+    height: 100%;
+  }
+
+  .reel2 {
+    width: 111px;
+    height: 100%;
+  }
+
+  .reel3 {
+    width: 111px;
+    height: 100%;
+  }
+
+  .reel4 {
+    width: 111px;
+    height: 100%;
+  }
+
+  .reel5 {
+    width: 111px;
+    height: 100%;
+  }
+
+  .line {
+    width: 3px;
+    height: 467px;
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+
+  .top-button {
+    width: 432px;
+    height: 155px;
+    background-image: url('./assets/Frame 3.png');
+    top: 220px;
+  }
+
+  .button {
+    background: url('./assets/Frame 4.png');
+    top: 955px;
+    width: 567px;
+    height: 155px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 172px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 228px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    height: 72px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .modal {
+    width: 1000px;
+    height: 620px;
+    border: 23px solid #00ffff;
+    border-radius: 115px;
+    margin-top: 312px;
+    top: 40px;
+  }
+
+  .modal-content {
+    width: 955px;
+    height: 575px;
+    border: 23px solid #00003e;
+    border-radius: 93px;
+    padding-top: 85px;
+  }
+
+  .button-modal {
+    background: url('./assets/Frame 266.png');
+    width: 390px;
+    height: 136px;
+  }
+
+  .modal-title {
+    font-size: 52px;
+    margin-bottom: 40px;
+  }
+
+  .modal-text {
+    font-size: 79px;
+    margin-bottom: 89px;
+  }
+
+  .copyright {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+
+  .brline {
+    display: none;
+  }
+
+  .text-adress {
+    margin-bottom: 0;
+  }
+
+  .text-links {
+    height: 72px;
+    margin-bottom: 0px;
+  }
+}
